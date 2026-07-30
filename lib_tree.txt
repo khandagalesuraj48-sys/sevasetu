@@ -1,0 +1,42 @@
+Folder PATH listing for volume New Volume
+Volume serial number is 3022-9495
+D:\DEVELOPMENT\SEVASETU\APP\LIB
+¦   main.dart
+¦   
++---config
+¦   +---env
++---core
+¦   ¦   core.dart
+¦   ¦   
+¦   +---constants
+¦   ¦       app_constants.dart
+¦   ¦       string_constants.dart
+¦   ¦       
+¦   +---env
+¦   ¦       environment.dart
+¦   ¦       
+¦   +---errors
+¦   +---logger
+¦   ¦       app_logger.dart
+¦   ¦       
+¦   +---network
+¦   ¦       dio_client.dart
+¦   ¦       
+¦   +---theme
+¦   +---utils
+¦           validators.dart
+¦           
++---features
++---presentation
+¦   +---providers
+¦   +---screens
++---router
+¦   +---guards
++---services
+¦   +---api
+¦   +---auth
+¦   +---storage
++---shared
+    +---extensions
+    +---models
+    +---widgets
