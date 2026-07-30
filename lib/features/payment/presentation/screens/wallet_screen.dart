@@ -47,7 +47,7 @@ class _WalletScreenState extends ConsumerState<WalletScreen> {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        '₹${paymentState.walletSummary?.balance?.toStringAsFixed(2) ?? '0.00'}',
+                        '₹${paymentState.walletSummary?.balance.toStringAsFixed(2) ?? '0.00'}',
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 36,
