@@ -1,4 +1,4 @@
-import '../data/models/payment_models.dart';
+import '../../data/models/payment_models.dart';
 
 abstract class PaymentRepository {
   Future<PaymentResponse> initiatePayment(PaymentRequest request);

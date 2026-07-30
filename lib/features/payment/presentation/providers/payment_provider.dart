@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../data/datasources/payment_remote_ds.dart';
-import '../data/repositories/payment_repository_impl.dart';
-import '../domain/use_cases/payment_usecases.dart';
-import '../data/models/payment_models.dart';
+import '../../data/datasources/payment_remote_ds.dart';
+import '../../data/repositories/payment_repository_impl.dart';
+import '../../domain/use_cases/payment_usecases.dart';
+import '../../data/models/payment_models.dart';
 
 // ---- Dependencies ----
 final paymentRemoteDataSourceProvider = Provider<PaymentRemoteDataSource>((ref) {

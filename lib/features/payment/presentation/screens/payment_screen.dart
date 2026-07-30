@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import '../providers/payment_provider.dart';
-import '../../data/models/payment_models.dart';
 
 class PaymentScreen extends ConsumerStatefulWidget {
   final String bookingId;
@@ -100,10 +99,9 @@ class _PaymentScreenState extends ConsumerState<PaymentScreen> {
                   ),
                   onPressed: () {
                     setState(() => _isProcessing = true);
-                    // Initiate payment with Razorpay
                     final options = {
-                      'key': 'YOUR_RAZORPAY_KEY', // Replace with actual key
-                      'amount': (widget.amount * 100).toInt(), // amount in paise
+                      'key': 'YOUR_RAZORPAY_KEY',
+                      'amount': (widget.amount * 100).toInt(),
                       'name': 'SevaSetu',
                       'description': 'Payment for Booking #${widget.bookingId}',
                       'prefill': {
