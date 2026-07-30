@@ -1,6 +1,6 @@
-import '../data/models/auth_request.dart';
-import '../data/models/auth_response.dart';
-import '../data/repositories/auth_repository_impl.dart';
+import '../../data/models/auth_request.dart';
+import '../../data/models/auth_response.dart';
+import '../../data/repositories/auth_repository_impl.dart';
 
 class LoginUseCase {
   final AuthRepositoryImpl repository;
