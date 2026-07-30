@@ -7,14 +7,16 @@ class SharedPrefsService {
   static SharedPrefsService get instance => _instance;
 
   late final SharedPreferences _prefs;
+  bool _initialized = false;
 
   /// Initializes the service. Must be called before any other method.
   static Future<void> init() async {
     instance._prefs = await SharedPreferences.getInstance();
+    instance._initialized = true;
   }
 
   /// Returns true if initialization has been done.
-  bool get isInitialized => _prefs != null;
+  bool get isInitialized => _initialized;
 
   // ---- String ----
   Future<bool> setString(String key, String value) async {
