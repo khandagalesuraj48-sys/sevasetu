@@ -61,7 +61,6 @@ class DashboardPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Welcome Section
             Text(
               'Hello, User!',
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
@@ -74,7 +73,6 @@ class DashboardPage extends StatelessWidget {
               style: TextStyle(color: Colors.grey[600]),
             ),
             const SizedBox(height: 20),
-            // Search Bar
             Container(
               decoration: BoxDecoration(
                 color: Theme.of(context).brightness == Brightness.light
@@ -92,7 +90,6 @@ class DashboardPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-            // Category Grid
             GridView.count(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
@@ -108,7 +105,6 @@ class DashboardPage extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 24),
-            // Recent Bookings
             Text(
               'Recent Bookings',
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -171,10 +167,7 @@ class ServiceCard extends StatelessWidget {
                 child: Icon(icon, size: 32, color: color),
               ),
               const SizedBox(height: 8),
-              Text(
-                label,
-                style: const TextStyle(fontWeight: FontWeight.w600),
-              ),
+              Text(label, style: const TextStyle(fontWeight: FontWeight.w600)),
             ],
           ),
         ),
@@ -334,12 +327,11 @@ class BookingsPage extends StatelessWidget {
 }
 
 // ---- Profile Page ----
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends ConsumerWidget {
   const ProfilePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final ref = context.read<ProviderContainer>();
+  Widget build(BuildContext context, WidgetRef ref) {
     final themeNotifier = ref.watch(themeNotifierProvider);
     final themeMode = ref.watch(themeModeProvider);
 
