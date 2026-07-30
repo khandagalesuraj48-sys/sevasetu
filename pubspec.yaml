@@ -11,20 +11,15 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # UI Icons
   cupertino_icons: ^1.0.8
-
-  # Networking
   dio: ^5.9.0
-
-  # Logging
   logger: ^2.6.1
-
-  # Navigation
   go_router: ^16.2.1
-
-  # State Management
   flutter_riverpod: ^2.6.1
+
+  # Storage
+  shared_preferences: ^2.5.3
+  flutter_secure_storage: ^9.2.4
 
 dev_dependencies:
   flutter_test:
