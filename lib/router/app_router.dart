@@ -3,6 +3,8 @@ import '../features/splash/presentation/screens/splash_screen.dart';
 import '../features/auth/presentation/screens/login_screen.dart';
 import '../features/auth/presentation/screens/register_screen.dart';
 import '../features/home/presentation/screens/home_screen.dart';
+import '../features/booking/presentation/screens/create_booking_screen.dart';
+import '../features/booking/presentation/screens/booking_history_screen.dart';
 
 class AppRouter {
   AppRouter._();
@@ -29,6 +31,25 @@ class AppRouter {
         path: '/home',
         name: 'home',
         builder: (context, state) => const HomeScreen(),
+      ),
+      GoRoute(
+        path: '/create-booking/:providerId/:serviceId',
+        name: 'create-booking',
+        builder: (context, state) {
+          final params = state.pathParameters;
+          return CreateBookingScreen(
+            providerId: params['providerId']!,
+            serviceId: params['serviceId']!,
+          );
+        },
+      ),
+      GoRoute(
+        path: '/bookings/:customerId',
+        name: 'bookings',
+        builder: (context, state) {
+          final params = state.pathParameters;
+          return BookingHistoryScreen(customerId: params['customerId']!);
+        },
       ),
     ],
   );
