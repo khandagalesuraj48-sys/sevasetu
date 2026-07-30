@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/booking_provider.dart';
-import '../../data/models/booking_response.dart';
 
 class BookingHistoryScreen extends ConsumerWidget {
   final String customerId;
