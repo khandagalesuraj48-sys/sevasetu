@@ -1,5 +1,5 @@
-import '../data/models/booking_request.dart';
-import '../data/models/booking_response.dart';
+import '../../data/models/booking_request.dart';
+import '../../data/models/booking_response.dart';
 
 abstract class BookingRepository {
   Future<BookingModel> createBooking(CreateBookingRequest request);

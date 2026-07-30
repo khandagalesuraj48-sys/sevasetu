@@ -1,10 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../data/datasources/booking_remote_ds.dart';
-import '../data/repositories/booking_repository_impl.dart';
-import '../domain/use_cases/create_booking_usecase.dart';
-import '../domain/use_cases/get_bookings_usecase.dart';
-import '../data/models/booking_request.dart';
-import '../data/models/booking_response.dart';
+import '../../data/datasources/booking_remote_ds.dart';
+import '../../data/repositories/booking_repository_impl.dart';
+import '../../domain/use_cases/create_booking_usecase.dart';
+import '../../domain/use_cases/get_bookings_usecase.dart';
+import '../../data/models/booking_request.dart';
+import '../../data/models/booking_response.dart';
 
 // ---- Dependencies ----
 final bookingRemoteDataSourceProvider = Provider<BookingRemoteDataSource>((ref) {
