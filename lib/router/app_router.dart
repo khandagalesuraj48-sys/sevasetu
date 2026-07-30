@@ -5,6 +5,8 @@ import '../features/auth/presentation/screens/register_screen.dart';
 import '../features/home/presentation/screens/home_screen.dart';
 import '../features/booking/presentation/screens/create_booking_screen.dart';
 import '../features/booking/presentation/screens/booking_history_screen.dart';
+import '../features/payment/presentation/screens/payment_screen.dart';
+import '../features/payment/presentation/screens/wallet_screen.dart';
 
 class AppRouter {
   AppRouter._();
@@ -49,6 +51,25 @@ class AppRouter {
         builder: (context, state) {
           final params = state.pathParameters;
           return BookingHistoryScreen(customerId: params['customerId']!);
+        },
+      ),
+      GoRoute(
+        path: '/payment/:bookingId/:amount',
+        name: 'payment',
+        builder: (context, state) {
+          final params = state.pathParameters;
+          return PaymentScreen(
+            bookingId: params['bookingId']!,
+            amount: double.parse(params['amount']!),
+          );
+        },
+      ),
+      GoRoute(
+        path: '/wallet/:userId',
+        name: 'wallet',
+        builder: (context, state) {
+          final params = state.pathParameters;
+          return WalletScreen(userId: params['userId']!);
         },
       ),
     ],
